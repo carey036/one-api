@@ -177,9 +177,9 @@ func Register(c *gin.Context) {
     cleanToken := model.Token{
         UserId:     user.Id,
         Name:      "default",
-        Key:      helper.GenerateKey(),
-        CreatedTime:  helper.GetTimestamp(),
-        AccessedTime:  helper.GetTimestamp(),
+        Key:      random.GenerateKey(),
+        CreatedTime:  0,
+        AccessedTime:  0,
 		ExpiredTime:  -1,
 		RemainQuota:  -1,
 		UnlimitedQuota: true,
